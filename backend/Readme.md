@@ -40,10 +40,10 @@ pip install fastapi uvicorn sqlalchemy pymysql python-dotenv passlib[bcrypt] pyt
 3. Environment Configuration
 Create a .env file in the backend/ root directory to configure your database and security settings.
 File: backend/.env
-# Database Connection (Default: SQLite)
+### Database Connection (Default: SQLite)
 DATABASE_URL=sqlite:///./kanban.db
 
-# Security Secrets (Change these for production!)
+### Security Secrets (Change these for production!)
 SECRET_KEY=your_super_secret_random_string
 ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=30
