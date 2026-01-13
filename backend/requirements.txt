@@ -7,4 +7,6 @@ python-jose[cryptography]
 passlib[bcrypt]
 pydantic[email]
 python-multipart
-"bcrypt==3.2.0"
+bcrypt==3.2.0
+pytest
+httpx
