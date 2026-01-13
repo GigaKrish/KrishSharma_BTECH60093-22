@@ -1,16 +1,73 @@
-# React + Vite
+# Frontend - Kanban Task Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Student Name:** Krish Sharma \
+**Roll No:** BTECH/60093/22\
+**Framework:** React + Vite
 
-Currently, two official plugins are available:
+## Project Overview
+The frontend interface for the Kanban Task Management System. It provides a responsive, drag-and-drop interface for managing tasks across different statuses (Pending, In Progress, Completed). It communicates with the FastAPI backend via REST APIs to ensure data persistence.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+* **Core:** React.js (Vite)
+* **Styling:** Tailwind CSS (v3.4.17)
+* **State Management:** React Context API (AuthContext)
+* **Routing:** React Router DOM
+* **Drag & Drop:** @hello-pangea/dnd
+* **HTTP Client:** Axios
+* **Icons:** Lucide React
+* **Date Formatting:** Date-fns
 
-## React Compiler
+## Setup & Installation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Prerequisites
+Ensure you have **Node.js** installed on your machine.
 
-## Expanding the ESLint configuration
+### 2. Installation
+Navigate to the frontend directory and install dependencies.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+    cd frontend
+    npm install
+```
+**Important Note on Tailwind CSS:** This project relies on **Tailwind CSS v3**. To ensure compatibility with the current configuration files and avoid version conflicts (specifically with v4), use the following command if re-installing dependencies:
+
+```Bash
+    npm install tailwindcss@3.4.17 postcss autoprefixer
+````
+3. Environment Configuration
+By default, the application connects to the backend at `http://localhost:8000`. To modify the backend URL, update the baseURL property in: src/services/api.js
+
+Running the Application
+To start the development server:
+
+```Bash
+    npm run dev
+```
+The application will be available at: http://localhost:5173
+
+**Project Structure**
+```Plaintext
+frontend/
+├── src/
+│   ├── components/      # Reusable UI components (TaskCard, Board Column)
+│   ├── context/         # Global state management (Authentication)
+│   ├── pages/           # Main Application Pages (Login, Register, Dashboard)
+│   ├── services/        # API configurations (Axios instance)
+│   ├── App.jsx          # Main App Component & Routing configuration
+│   └── main.jsx         # Entry point
+├── tailwind.config.js   # Tailwind CSS Configuration
+└── package.json         # Project dependencies and scripts
+```
+**Development Notes**
+
+Initialization
+This project was initialized using Vite with the following command:
+```Bash
+    npm create vite@latest frontend -- --template react
+```
+Key Libraries
+The following command was used to install the core functionality packages:
+
+```Bash
+    npm install axios react-router-dom @hello-pangea/dnd lucide-react date-fns tailwindcss postcss autoprefixer
+```
