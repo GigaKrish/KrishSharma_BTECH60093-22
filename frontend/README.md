@@ -26,13 +26,13 @@ Ensure you have **Node.js** installed on your machine.
 Navigate to the frontend directory and install dependencies.
 
 ```bash
-    cd frontend
-    npm install
+cd frontend
+npm install
 ```
 **Important Note on Tailwind CSS:** This project relies on **Tailwind CSS v3**. To ensure compatibility with the current configuration files and avoid version conflicts (specifically with v4), use the following command if re-installing dependencies:
 
 ```Bash
-    npm install tailwindcss@3.4.17 postcss autoprefixer
+npm install tailwindcss@3.4.17 postcss autoprefixer
 ````
 3. Environment Configuration
 By default, the application connects to the backend at `http://localhost:8000`. To modify the backend URL, update the baseURL property in: src/services/api.js
@@ -41,7 +41,7 @@ Running the Application
 To start the development server:
 
 ```Bash
-    npm run dev
+npm run dev
 ```
 The application will be available at: http://localhost:5173
 
@@ -63,11 +63,11 @@ frontend/
 Initialization
 This project was initialized using Vite with the following command:
 ```Bash
-    npm create vite@latest frontend -- --template react
+npm create vite@latest frontend -- --template react
 ```
 Key Libraries
 The following command was used to install the core functionality packages:
 
 ```Bash
-    npm install axios react-router-dom @hello-pangea/dnd lucide-react date-fns tailwindcss postcss autoprefixer
+npm install axios react-router-dom @hello-pangea/dnd lucide-react date-fns tailwindcss postcss autoprefixer
 ```
