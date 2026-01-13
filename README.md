@@ -5,6 +5,7 @@
 
 ## Demo Video
 > **[View Video](https://drive.google.com/file/d/1E5KqJGVb7Lc6-zT0ZSkbU7yjaYDUrQRP/view?usp=drivesdk)**
+
 This video demonstrates Kanban deployment, which features to update task, save login /signup info and route task data to specific account along with various other functionality. 
 
 ## Project Overview
