@@ -29,6 +29,7 @@ Navigate to the backend directory and set up your virtual environment to isolate
 ```bash
 cd backend
 python -m venv .venv
+```
 
 Activate the virtual environment:
  * Windows: .venv\Scripts\activate
@@ -52,7 +53,9 @@ To start the development server with auto-reload:
 python -m uvicorn app.main:app --reload
 
 The API will be available at: http://127.0.0.1:8000
+
 Project Structure
+```plaintext
 backend/
 ├── app/
 │   ├── core/            # Configuration & Security (config.py, security.py)
@@ -63,7 +66,7 @@ backend/
 │   └── __init__.py
 ├── .env                 # Environment variables (GitIgnored)
 └── requirements.txt     # Python dependencies
-
+```
 Development Notes
 API Documentation
 Once the server is running, you can access the interactive API documentation at:
