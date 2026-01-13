@@ -1,21 +1,19 @@
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker, declarative_base
+from sqlalchemy.orm import sessionmaker, Session
 from app.core.config import settings
 
-# Check if we are using SQLite (which starts with "sqlite")
-if settings.DATABASE_URL.startswith("sqlite"):
-    # SQLite specific args
-    engine = create_engine(
-        settings.DATABASE_URL, connect_args={"check_same_thread": False}
-    )
-else:
-    # MySQL/PostgreSQL connection
-    engine = create_engine(settings.DATABASE_URL)
+# SQLite-specific check
+connect_args = {"check_same_thread": False} if "sqlite" in settings.DATABASE_URL else {}
+
+engine = create_engine(
+    settings.DATABASE_URL,
+    connect_args=connect_args
+)
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-Base = declarative_base()
 
-def get_db():
+def get_db() -> Session:
+    """Dependency to get database session"""
     db = SessionLocal()
     try:
         yield db
